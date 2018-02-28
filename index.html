@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects in School</title>
+    <script src="objects.js"></script>
+    <script src="data.js"></script>
+    <script src="actions.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body onload="createLists()">
+<h1>Objects In School</h1>
+
+<label for="list"></label><select id="list">
+    <option value="0">Students</option>
+    <option value="1">Teachers</option>
+    <option value="2">Sections</option>
+</select>
+
+<button id="listButton" type="button" class="btn btn-primary btn-sm" onclick="listItems()">List Items</button>
+
+
+<div id="finishedList"></div>
+<hr>
+
+<br>
+
+<input id="teacherSubject" placeholder="subject">
+<input id="teacherFirstName" placeholder="first name">
+<input id="teacherLastName" placeholder="last name">
+
+<button id="addTeacher" type="button" class="btn btn-success btn-sm" onclick="addTeacher()">Add Teacher to System</button>
+
+<br><br>
+
+<input id="studentGrade" placeholder="grade">
+<input id="studentFirstName" placeholder="first name">
+<input id="studentLastName" placeholder="last name">
+
+<button id="addStudent" type="button" class="btn btn-success btn-sm" onclick="addStudent()">Add Student to System</button>
+
+<br><br>
+
+<input id="sectionName" placeholder="section name">
+<input id="sectionCount" placeholder="section count">
+
+<button id="addSection" type="button" class="btn btn-success btn-sm" onclick="addSection()">Add Section to System</button>
+<hr>
+<label for="selectStudent"></label><select id="selectStudent">
+    <option value="0">Select Student</option>
+</select>
+
+<button id="findStudent" type="button" class="btn btn-info btn-sm" onclick="findStudent()">Find Student</button>
+
+<table id = "studentSection" class="table table-hover">
+
+</table>
+
+<br><br>
+<hr>
+<br><br>
+<label for="selectStudent1"></label><select id="selectStudent1">
+    <option value="0">Select Student</option>
+</select>
+<label for="selectTeacher"></label><select id="selectTeacher">
+    <option value="0">Select Teacher</option>
+</select>
+<label for="selectSection"></label><select id="selectSection">
+    <option value="0">Select Section</option>
+
+</select>
+
+<button id="studentToSection" type="button" class="btn btn-success btn-sm" onclick="studentToSection()">Add Student To Section</button>
+
+<button id="studentFromSection" type="button" class="btn btn-danger btn-sm" onclick="studentFromSection()">Remove Student From Section</button>
+
+<button id="teacherToSection" type="button" class="btn btn-info btn-sm" onclick="teacherToSection()">Add Teacher To Section</button>
+
+<button id="displayInfo" type="button" class="btn btn-primary btn-sm" onclick="displayInfo()">Display Section Information</button>
+<table id="sectionInformation" class="table table-hover">
+
+</table>
+<br><br>
+</body>
+</html>
